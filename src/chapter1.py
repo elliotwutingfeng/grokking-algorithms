@@ -1,5 +1,5 @@
 # Binary search O(lgN)
-def binary_search(arr: list[int], item:int) -> int | None:
+def binary_search(arr: list[int], item: int) -> int | None:
     low = 0
     high = len(arr) - 1
     while low <= high:

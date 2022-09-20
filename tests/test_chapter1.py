@@ -2,7 +2,7 @@ import pytest
 
 from src.chapter1 import binary_search
 
-arr = [1,3,5,7,9]
+arr = [1, 3, 5, 7, 9]
 test_cases = [
     ([], 1, None),
     ([4], 2, None),
@@ -17,8 +17,9 @@ test_cases = [
     (arr, 6, None),
     (arr, 8, None),
     (arr, 10, None),
-    ]
+]
+
 
 @pytest.mark.parametrize("arr, item, expected", test_cases)
 def test_binary_search(arr: list[int], item: int, expected: int | None):
-    assert(binary_search(arr, item) == expected)
+    assert binary_search(arr, item) == expected

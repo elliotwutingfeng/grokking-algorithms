@@ -1,5 +1,6 @@
 # Dijkstra's Algorithm
 
+
 def find_shortest_path(graph, source, destination) -> tuple[list, float]:
     def get_keys(dictionary) -> set[str]:
         """
@@ -14,6 +15,7 @@ def find_shortest_path(graph, source, destination) -> tuple[list, float]:
             else:
                 result.add(key)
         return result
+
     def find_lowest_cost_node(costs):
         lowest_cost = float("inf")
         lowest_cost_node = None
@@ -27,8 +29,11 @@ def find_shortest_path(graph, source, destination) -> tuple[list, float]:
     all_nodes = get_keys(graph)
     if source not in all_nodes or destination not in all_nodes:
         return ([], -1)
-    costs = {**{node : float("inf") for node in all_nodes}, **graph[source]}
-    parents = {**{destination : None for _ in all_nodes}, **{k:source for k in graph[source]}}
+    costs = {**{node: float("inf") for node in all_nodes}, **graph[source]}
+    parents = {
+        **{destination: None for _ in all_nodes},
+        **{k: source for k in graph[source]},
+    }
 
     processed = set()
     while (node := find_lowest_cost_node(costs)) is not None:

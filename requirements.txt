@@ -1,3 +1,4 @@
+black
 more-itertools
 pytest
 pytest-cov

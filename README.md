@@ -32,6 +32,12 @@ Solutions to problems listed in the book "grokking algorithms" by Aditya Y. Bhar
 pip3 install -r requirements.txt
 ```
 
+## Formatting
+
+```shell
+black .
+```
+
 ## Testing
 
 ```shell

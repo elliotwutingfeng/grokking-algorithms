@@ -8,7 +8,7 @@ b = "bob"
 c = "claire"
 an = "anuj"
 p = "peggy"
-t = "thom" # seller
+t = "thom"  # seller
 j = "jonny"
 
 graph = {}
@@ -20,9 +20,13 @@ graph[an] = []
 graph[p] = []
 graph[t] = []
 graph[j] = []
+
+
 def person_is_seller(person):
     # Seller's names end with 'm', like 'thom'
-    return person[-1] == 'm'
+    return person[-1] == "m"
+
+
 def search(name):
     search_queue = deque()
     if name not in graph:
@@ -33,7 +37,7 @@ def search(name):
         person = search_queue.popleft()
         if person not in searched:
             if person_is_seller(person):
-                print("Searched:", len(searched)+1)
+                print("Searched:", len(searched) + 1)
                 return True
             else:
                 search_queue += graph[person]
