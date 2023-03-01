@@ -12,7 +12,7 @@ Solutions to problems listed in the book "grokking algorithms" by Aditya Y. Bhar
 - [x] Maximum Square Plot (Divide & Conquer)
 - [x] Quick Sort
 - [x] Merge Sort
-- [ ] Hash Table Implementation
+- [x] Hash Table Implementation
 - [x] Breadth First Search
 - [x] Dijkstra's Algorithm
 - [x] Knapsack problem (Greedy approximation)
