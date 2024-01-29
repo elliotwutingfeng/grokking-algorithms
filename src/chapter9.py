@@ -71,6 +71,7 @@ def longest_common_substring(a: str, b: str) -> str:
 
 # Longest common subsequence
 
+
 # Returns number of letters in a sequence that 2 words have in common
 def longest_common_subsequence(a: str, b: str) -> int:
     cell = [

@@ -24,22 +24,24 @@ Solutions to problems listed in the book "grokking algorithms" by Aditya Y. Bhar
 
 ## Requirements
 
-- Python 3.10
+- Python 3.12+
 
 ## Setup
 
 ```shell
-pip3 install -r requirements.txt
+python3 -m venv venv
+venv/bin/python3 -m pip install --upgrade pip
+venv/bin/python3 -m pip install -r requirements.txt
 ```
 
 ## Formatting
 
 ```shell
-black .
+venv/bin/python3 -m black .
 ```
 
 ## Testing
 
 ```shell
-pytest --cov
+venv/bin/python3 -m pytest --cov
 ```

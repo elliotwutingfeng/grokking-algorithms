@@ -23,11 +23,13 @@ def test_hash_collision_gets_separate_chaining(hash_table):
         else:
             assert len(hash_table._buckets[bucket]) == 0
 
+
 def test_hash_table_can_grow():
     hash_table = HashTable(capacity=1)
     for i in range(20):
         hash_table[i] = i
     assert hash_table.capacity == 32
+
 
 @pytest.fixture
 def hash_table():

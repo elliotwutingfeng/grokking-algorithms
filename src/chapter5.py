@@ -50,6 +50,7 @@ plot(distribute(printable, num_containers=2))
 print("15 buckets")
 plot(distribute(printable, num_containers=15))
 
+
 # ord hash function
 def hash_function(text):
     return sum(ord(character) for character in text)
@@ -60,6 +61,7 @@ def hash_function(text):
 
 # We can try to support non-string types and distinguish between similar values of different types
 # like "3.14" vs 3.14, by using repr()
+
 
 # ord hash function with repr()
 def hash_function_repr(text):
@@ -81,6 +83,8 @@ print("DONE!")
 
 print("Distribution is also not uniform")
 plot(distribute(printable, 6, hash_function_position_value))
+
+
 # Moreover, there are six containers available, but one is missing from the histogram. This problem
 # stems from the fact that the two apostrophes added by repr() cause virtually all keys
 # in this example to result in an even hash number.

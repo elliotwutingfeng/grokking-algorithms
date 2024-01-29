@@ -36,6 +36,7 @@ class Pair(NamedTuple):
     key: Any
     value: Any
 
+
 class HashTable:
     def __init__(self, capacity=8, load_factor_threshold=0.6):
         if capacity < 1:
@@ -43,7 +44,7 @@ class HashTable:
         if not (0 < load_factor_threshold <= 1):
             raise ValueError("Load factor must be a number between (0, 1]")
         self._buckets = [deque() for _ in range(capacity)]
-        self._keys = [] # to remember insertion order
+        self._keys = []  # to remember insertion order
         self._load_factor_threshold = load_factor_threshold
 
     @classmethod
@@ -152,6 +153,7 @@ class HashTable:
 
     def _index(self, key):
         return hash(key) % self.capacity
+
 
 # In the beginning, bob hashes to key1
 # employees = {alice: "project manager", bob: "engineer"} -> employees contains key1
